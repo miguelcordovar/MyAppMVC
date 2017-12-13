@@ -13,6 +13,7 @@ namespace MyAppMVC
             var container = new UnityContainer();
             //Register the Repository in the Unity Container
             container.RegisterType<IRepository<EmployeeInfo, int>, EmployeeInfoRepository>();
+            container.RegisterType<IRepository<Afiliado, int>, AfiliadoRepository>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

@@ -18,13 +18,26 @@ namespace MyAppMVC.Models
         public ApplicationEntities()
             : base("name=ApplicationEntities")
         {
+            this.Configuration.ProxyCreationEnabled = false;
         }
+
+        
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            /*
+            modelBuilder.Entity<TipoDocumento>()
+                .HasMany(c => c.Cliente)
+                .WithRequired(e => e.TipoDocumento);
+            */
+
         }
     
         public virtual DbSet<EmployeeInfo> EmployeeInfo { get; set; }
+        public virtual DbSet<Afiliado> Afiliado { get; set; }
+        public virtual DbSet<Cliente> Cliente { get; set; }
+        public virtual DbSet<Empleador> Empleador { get; set; }
+        public virtual DbSet<TipoCliente> TipoCliente { get; set; }
+        public virtual DbSet<TipoDocumento> TipoDocumento { get; set; }
     }
 }

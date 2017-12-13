@@ -5,7 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="fda53b50e5094c36a9e69c615c995f3f" Name="Diagram1">
-        <EntityTypeShape EntityType="ApplicationModel.EmployeeInfo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplicationModel.EmployeeInfo" Width="1.5" PointX="3.5" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApplicationModel.Afiliado" Width="1.5" PointX="6" PointY="6.375" />
+        <EntityTypeShape EntityType="ApplicationModel.Cliente" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="ApplicationModel.Empleador" Width="1.5" PointX="6" PointY="4" />
+        <EntityTypeShape EntityType="ApplicationModel.TipoCliente" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="ApplicationModel.TipoDocumento" Width="2.5" PointX="0.75" PointY="2.375" />
+        <AssociationConnector Association="ApplicationModel.FK_Afiliado_Cliente" />
+        <AssociationConnector Association="ApplicationModel.FK_Cliente_TipoCliente" />
+        <AssociationConnector Association="ApplicationModel.FK_Cliente_TipoDocumento" />
+        <AssociationConnector Association="ApplicationModel.FK_Empleador_Cliente" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
